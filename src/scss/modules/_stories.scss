@@ -1,0 +1,63 @@
+.stories {
+    @include content-center();
+    width: 100%;
+    color: #fff;
+    background-image: url('../../assets/background-learn.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h2 {
+        width: 480px;
+        height: 117px;    
+        font-family: $font-header;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        color: #FFFFFF;
+        margin-top: 84px;
+        margin-bottom: 53px;
+    }
+
+    button {
+        width: 150px;
+        height: 150px;   
+        font-size: 70px;
+        background: $color-blue;
+        border-radius: 50%;
+        color: #FFFFFF;
+        border: none;
+        padding-left: 15px;
+        cursor: pointer;
+    }
+
+    .stories__button {
+        transition: all 0.5s ease;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        &:hover {
+            transform:scale(1.1);
+            background: #fff;
+            color: $color-blue;
+        }
+    }
+
+    h3 {
+        width: 410px;
+        height: 102px;    
+        font-family: $font-body;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #FFFFFF;
+        margin-top: 70px;
+        margin-bottom: 90px;
+        text-shadow: 2px 0 2px #000000;
+    }
+}
+
+
+
