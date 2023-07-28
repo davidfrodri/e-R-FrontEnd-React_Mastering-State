@@ -1,0 +1,46 @@
+.alert-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    display: flex;
+    z-index: 30;
+
+    .symbol-container {
+        width: 86px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .symbol {
+            font-size: 1.75rem;
+        }
+    }
+
+    .description-container {
+        font-size: 1.05rem;
+        margin: 15px 20px;
+        width: 100%;
+
+        .description-title {
+            font-weight: 700;
+        }
+     }
+
+    .symbol-close-link {
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin-right: 6px;
+     }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
