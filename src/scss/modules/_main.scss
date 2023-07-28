@@ -7,12 +7,14 @@
     z-index: -1;
 
     h2 {
-        width: 56%;
+        max-width: 600px;
+
         font-family: $font-header;
         font-weight: 700;
         font-size: 48px;
         line-height: 64px;
         color: #464547;
+
         margin-top: 87px;
         margin-bottom: 40px;
     }
@@ -52,24 +54,14 @@
     }
 
     .main__button-rotate3d {
-        background: #55C2D8;
-        border-radius: 18px;
-        font-family: $font-body;
-        font-size: 14px;
-        line-height: 26px;
-        letter-spacing: 0.1em;
-        color: #FFFFFF;   
-        text-transform: uppercase;
-        padding: 5px 17px 6px 18px;
-        border: none;
         margin-top: 22px;
         margin-bottom: 98px;
-        cursor: pointer;
+        
         transition: transform 0.5s ease;
         transform-origin: top left;
 
         &.active {
-            transform: rotate(8deg);
+            transform: translateY(2px);
         }
     }
 }

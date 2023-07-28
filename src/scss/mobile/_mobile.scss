@@ -30,21 +30,23 @@
     }
 
     footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        height: 293px;
-        padding: 56px 0 0px 0px;
-
-        p:nth-child(2) {
-                margin: 31px 0px 18px 0px;
-            }
-        
-        a {
-                margin-bottom: 19px;
-            }
+        .footer {
+            display: flex;
+            flex-direction: column;
+            
+            text-align: center;
+            height: 293px;
+    
+            p:nth-child(2) {
+                    margin: 31px 0px 18px 0px;
+                }
+            
+            a {
+                    margin-bottom: 19px;
+                }
+        }
     }
+    
     /* ---- TOGGLE ------ */
 
     .header__nav {ul {li { display: none;}}}
@@ -83,6 +85,14 @@
       display: block;
       padding: 10px 20px;
       color: #fff;
+    }
+
+    .join-our-program {
+        .email-form {
+            input {
+                width: 300px;
+            }
+        }
     }
 }
 
