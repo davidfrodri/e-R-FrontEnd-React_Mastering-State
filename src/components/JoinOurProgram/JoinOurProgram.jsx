@@ -1,11 +1,13 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { useState } from 'react'
+import { connect } from 'react-redux'
 
+import { subscribeStateAction } from '../../store/subscriberState/actionCreators'
 import { postEmailToAPI, deleteEmailToAPI } from '../../services'
 import Alert from '../common/Alert/Alert'
 
-const JoinOurProgram = () => {
+const JoinOurProgram = ({ subscribeState, subscribeStateAction }) => {
   const [responseStatus, setResponseStatus] = useState('')
   const [buttonClicked, setButtonClicked] = useState(null)
 
@@ -18,12 +20,16 @@ const JoinOurProgram = () => {
   const handleSubscribe = async (values, { setSubmitting }) => {
     const response = await postEmailToAPI(values)
     setResponseStatus(response)
+    if (response.statusText === 'Conflict') {
+      subscribeStateAction(true)
+    }
     setSubmitting(false)
   }
 
   const handleUnsubscribe = async (values, { setSubmitting }) => {
     const response = await deleteEmailToAPI(values.email)
     setResponseStatus(response)
+    subscribeStateAction(false)
     setSubmitting(false)
   }
 
@@ -56,7 +62,7 @@ const JoinOurProgram = () => {
                 placeholder='Email'
               />
               <div className='buttons'>
-                {responseStatus.statusText === 'Conflict' ? <button
+                {subscribeState ? <button
                   className='btn unsubscribe'
                   type='submit'
                   disabled={!dirty}
@@ -92,4 +98,14 @@ const JoinOurProgram = () => {
   )
 }
 
-export default JoinOurProgram
+const mapStateToProps = (state) => {
+  return {
+    subscribeState: state.suscriber.subscribeState
+  }
+}
+
+const mapDispatchToProps = {
+  subscribeStateAction
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(JoinOurProgram)

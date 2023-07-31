@@ -12,7 +12,8 @@
   "rules": {
     "react/prop-types": "off",
     "multiline-ternary": ["error", "never"],
-    "indent": ["error", 2]
+    "indent": ["error", 2],
+    "no-case-declarations" :"off"
   },
   "settings": {
     "react": {

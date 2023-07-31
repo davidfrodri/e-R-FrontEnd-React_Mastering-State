@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { connect } from 'react-redux'
 
-function ShowComponent ({ children, titleSection }) {
-  const [isSectionVisible, setIsSectionVisible] = useState(true)
+import { toggleSectionVisibility } from '../../store/sectionVisibility/actionCreators'
+
+export function ShowComponent ({ children, titleSection, sections, toggleSectionVisibility, sectionName }) {
+  const isSectionVisible = sections[sectionName]
 
   const handleSendData = () => {
-    setIsSectionVisible((prevState) => !prevState)
+    toggleSectionVisibility(sectionName)
   }
 
   return (
@@ -20,4 +22,14 @@ function ShowComponent ({ children, titleSection }) {
   )
 }
 
-export default ShowComponent
+const mapStateToProps = (state) => {
+  return {
+    sections: state.sectionVisibility.sections
+  }
+}
+
+const mapDispatchToProps = {
+  toggleSectionVisibility
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShowComponent)
