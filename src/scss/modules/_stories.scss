@@ -1,0 +1,79 @@
+.stories {
+    @include content-center();
+    width: 100%;
+    position: relative;
+
+    color: #ffffffb9;
+    background-image: url('../../assets/background-learn.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(37, 1, 1, 0.3); /* Cambia el valor alpha (0.5) para ajustar la opacidad */
+        z-index: 1;
+      }
+
+    h2 {
+        width: 480px;
+        height: 117px;    
+        font-family: $font-header;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        color: #dbd9d9fd;
+        margin-top: 84px;
+        margin-bottom: 53px;
+        z-index: 2;
+    }
+
+    button {
+        width: 150px;
+        height: 150px;   
+        font-size: 70px;
+        background: $color-blue;
+        border-radius: 50%;
+        color: #FFFFFF;
+        border: none;
+        padding-left: 15px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .stories__button {
+        transition: all 0.5s ease;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        &:hover {
+            transform:scale(1.1);
+            background: #fff;
+            color: $color-blue;
+        }
+    }
+
+    h3 {
+        width: 410px;
+        height: 102px;    
+        font-family: $font-body;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #dbd9d9fd;
+        margin-top: 70px;
+        margin-bottom: 90px;
+        text-shadow: 2px 0 2px #000000;
+        z-index: 2;
+    }
+}
+
+
+

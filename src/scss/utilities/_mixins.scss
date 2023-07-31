@@ -1,0 +1,15 @@
+@mixin background-features($url) {
+    width: 100%;
+    height: $height-header;
+    background-image: url($url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+@mixin content-center {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
