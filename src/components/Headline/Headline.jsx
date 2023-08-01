@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { toggleMenu } from '../../utils'
 import logo from '../../assets/[PLACEHOLDER LOGO].png'
 
@@ -12,13 +13,13 @@ const Headline = () => {
       <nav className="header__nav">
         <ul>
           <li>
-            <a href="#projects">Projects</a>
+            <Link to='/'>Projects</Link>
           </li>
           <li>
-            <a href="#main">About us</a>
+            <Link to='/'>About us</Link>
           </li>
           <li>
-            <a href="#stories">Stories</a>
+            <Link to='/community'>Stories</Link>
           </li>
           <li>
             <a href="#footer">Contact</a>

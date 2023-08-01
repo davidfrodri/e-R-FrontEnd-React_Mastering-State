@@ -29,13 +29,13 @@ export const BigCommunity = ({ employees, isLoading, error, fetchEmployees }) =>
             {employees.map((employee) => (
               <div key={employee.id} className='card'>
                 <img
-                  src={employee.photo_url}
-                  alt={`profile of ${employee.name}`}
+                  src={employee.avatar}
+                  alt={`profile of ${employee.firstName}`}
                 />
                 <p className='description'>{employee.description}</p>
-                <p className='name'>{employee.name}</p>
+                <p className='name'>{`${employee.firstName} ${employee.lastName}`}</p>
                 <p className='job-position'>
-                  {employee.position + ' at ' + employee.company}
+                  {employee.position}
                 </p>
               </div>
             ))}

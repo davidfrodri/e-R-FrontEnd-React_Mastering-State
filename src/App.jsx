@@ -1,20 +1,21 @@
-import Headline from './components/Headline/Headline'
-import Main from './components/Main/Main'
-import Stories from './components/Stories/Stories'
+import { Route, Routes } from 'react-router-dom'
+
+import { HeaderFooterLayout } from './layouts/HeaderFooterLayout'
+import MainPage from './pages/MainPage'
 import BigCommunity from './components/BigCommunity/BigCommunity'
-import JoinOurProgram from './components/JoinOurProgram/JoinOurProgram'
-import Footer from './components/Footer/Footer'
+import UserCommunity from './components/UserCommunity.jsx/UserCommunity'
+import NotFound from './components/NotFound/NotFound'
 
 function App () {
   return (
-    <>
-      <Headline />
-      <Main />
-      <BigCommunity />
-      <Stories />
-      <JoinOurProgram />
-      <Footer />
-    </>
+    <Routes>
+      <Route element={<HeaderFooterLayout />} >
+        <Route path='/' element={<MainPage />} />
+        <Route path='/community' element={<BigCommunity />} />
+        <Route path='/community/:id' element={<UserCommunity />} />
+        <Route path="/not-found" element={<NotFound />} />
+      </Route>
+    </Routes>
   )
 }
 

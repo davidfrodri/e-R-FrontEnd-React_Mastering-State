@@ -5,6 +5,11 @@ export const getEmployeesFromAPI = async () => {
   return response.data
 }
 
+export const getEmployeeFromAPI = async (id) => {
+  const response = await clientAxios.get(`/community/${id}`)
+  return response
+}
+
 export const postEmailToAPI = async (values) => {
   try {
     const response = await clientAxios.post('/subscribe', values)
