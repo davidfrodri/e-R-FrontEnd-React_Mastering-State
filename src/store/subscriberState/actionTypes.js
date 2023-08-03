@@ -1,0 +1,1 @@
+export const SUBSCRIBE_STATE = 'SUBSCRIBE_STATE'

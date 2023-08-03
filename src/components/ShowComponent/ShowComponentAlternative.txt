@@ -1,0 +1,13 @@
+function ShowComponent({ sendDataToParent, isSectionVisible }) {
+  const handleSendData = () => {
+    sendDataToParent((prevState) => !prevState);
+  };
+
+  return (
+    <button onClick={handleSendData}>
+      {isSectionVisible ? <p>Hide Section</p> : <p>Show Section</p>}
+    </button>
+  );
+}
+
+export default ShowComponent;
