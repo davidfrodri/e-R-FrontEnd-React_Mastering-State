@@ -1,0 +1,99 @@
+.big-community {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 100px auto 150px auto;
+    width: 100%;
+
+    .show-component {
+        display: flexbox;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .row {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 100%;
+
+            h2 {
+                padding: 30px;
+                max-width: 500px;
+
+                text-align: center;
+                font-family: $font-header;
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 64px;
+                color: #464547;
+            }
+
+            button {
+                position: absolute;
+                bottom: -60px;
+            }
+        }
+
+        h3 {
+            max-width: 426px;
+
+            text-align: center;
+            font-family: $font-body;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            color: #666666;
+            margin: 130px auto 50px auto;
+        }
+        
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
+
+        height: 360px;
+        width: 264px;
+        padding: 20px;
+
+        text-align: center;
+        font-family: $font-body;
+        margin: auto;
+        border-radius: 5px;
+        box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.07);
+        overflow: hidden;
+
+        img {
+            width: 150px;
+        }
+
+        .description {
+            color: #666666;
+            font-size: 15px;
+            height: 86px;
+        }
+
+        .name {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .job-position {
+            width: 120px;
+            color: #666666;
+            font-size: 12px;
+        }
+    }
+
+    
+}

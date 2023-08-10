@@ -1,0 +1,25 @@
+.btn {
+    background: #55C2D8;
+        
+    font-family: $font-body;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;   
+    text-transform: uppercase;
+    
+    padding: 5px 17px 6px 18px;
+    border-radius: 18px;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #ffffff;
+        color: #55C2D8;   
+        border: 2px solid #55C2D8;
+    }
+
+    &:disabled {
+        background-color: #55c2d879
+    }
+}

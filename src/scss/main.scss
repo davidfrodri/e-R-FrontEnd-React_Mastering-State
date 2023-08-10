@@ -1,0 +1,25 @@
+@import 'base/reset';
+@import 'base/typo';
+
+@import 'utilities/variables';
+@import 'utilities/animations';
+@import 'utilities/mixins';
+
+@import 'common/loading';
+@import 'common/alert';
+@import 'common/button';
+@import 'common/errors';
+
+@import 'modules/header';
+@import 'modules/main';
+@import 'modules/bigCommunity';
+@import 'modules/stories';
+@import 'modules/joinOurProgram';
+@import 'modules/carousel';
+@import 'modules/footer';
+
+@import 'mobile/mobile';
+
+html {
+    scroll-behavior: smooth;
+}

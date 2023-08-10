@@ -1,0 +1,107 @@
+@media (max-width: 768px) {
+    .main {
+        h2 {
+            padding: 0px 70px 0px 70px;
+        }
+
+        .main__lorem {
+            flex-direction: column;
+            align-items: center;
+            p:nth-child(1),
+            p:nth-child(2) {
+                padding: 20px;
+            }
+        }
+    }
+
+    .header__hero h1,
+    .header__hero h2,
+    .main h2, 
+    .main h3, 
+    .main .main__lorem,
+    .main .main__lorem p:nth-child(1),
+    .main .main__lorem p:nth-child(2),
+    .stories h3{
+        width: 100%;
+    }
+
+    .stories h2 {
+        width: auto;
+    }
+
+    footer {
+        .footer {
+            display: flex;
+            flex-direction: column;
+            
+            text-align: center;
+            height: 293px;
+    
+            p:nth-child(2) {
+                    margin: 31px 0px 18px 0px;
+                }
+            
+            a {
+                    margin-bottom: 19px;
+                }
+        }
+    }
+    
+    /* ---- TOGGLE ------ */
+
+    .header__nav {ul {li { display: none;}}}
+    
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        color: #fff;
+        width: 22px;
+        height: 15px;
+        position: absolute; 
+        top: 40px;
+        right: 20px;
+    }
+
+    .line {
+        width: 100%;
+        border-radius: 2px;
+        height: 2px;
+        background-color: #fff;
+    }
+    
+    .nav-dropdown {
+        display: none;
+        background-color: #333;
+        padding: 10px 0;
+        overflow: hidden;
+        position: absolute; 
+        top: 30px;
+        right: 30px;
+    }
+    
+    .nav-dropdown a {
+      display: block;
+      padding: 10px 20px;
+      color: #fff;
+    }
+
+    .join-our-program {
+        .email-form {
+            input {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+      }
+  
+    .nav-dropdown a { 
+      display: none;
+    }
+  }
