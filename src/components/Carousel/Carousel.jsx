@@ -23,11 +23,7 @@ const Carousel = ({ children }) => {
         className='carousel'
         style={{ transform: `translateX(-${currentIndex * 350}px)` }}
       >
-        {children.map((child, index) => (
-          <div className='slide' key={index}>
-            {child}
-          </div>
-        ))}
+        {children}
       </div>
       <button className='prev-btn' onClick={prevSlide}>
         {'\u27E8'}

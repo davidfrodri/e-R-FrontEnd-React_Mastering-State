@@ -2,7 +2,7 @@ import logo from '../../assets/[PLACEHOLDER LOGO].png'
 
 const Footer = () => {
   return (
-    <footer id='footer'>
+    <footer id='footer' role="contentinfo">
       <div className='footer'>
         <p className='col-1 gr1'>
           <img src={logo} alt='PLACEHOLDER LOGO' width='20px' />{' '}

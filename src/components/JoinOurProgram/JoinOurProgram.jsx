@@ -20,7 +20,7 @@ const JoinOurProgram = ({ subscribeState, subscribeStateAction }) => {
   const handleSubscribe = async (values, { setSubmitting }) => {
     const response = await postEmailToAPI(values)
     setResponseStatus(response)
-    if (response.statusText === 'Conflict') {
+    if (response.status === 422) {
       subscribeStateAction(true)
     }
     setSubmitting(false)
@@ -29,7 +29,9 @@ const JoinOurProgram = ({ subscribeState, subscribeStateAction }) => {
   const handleUnsubscribe = async (values, { setSubmitting }) => {
     const response = await deleteEmailToAPI(values.email)
     setResponseStatus(response)
-    subscribeStateAction(false)
+    // if (response.status === 200) {
+    //   subscribeStateAction(false)
+    // }
     setSubmitting(false)
   }
 
@@ -87,10 +89,10 @@ const JoinOurProgram = ({ subscribeState, subscribeStateAction }) => {
               />
             )}
             {/* it's necessary refactor and handle this alert better  */}
-            { responseStatus.statusText === 'Created' ? <Alert variant='green' text='Your email has been created' /> : null}
-            { responseStatus.status === 200 ? <Alert variant='green' text='Your email has been deleted'/> : null}
+            { !subscribeState && responseStatus.status === 200 ? <Alert variant='green' text='Your email has been created' /> : null}
+            { subscribeState && responseStatus.status === 200 ? <Alert variant='green' text='Your email has been deleted'/> : null}
             { responseStatus.status === 404 ? <Alert variant='yellow' text='Email not found'/> : null}
-            { responseStatus.statusText === 'Conflict' ? <Alert variant='blue' text='That email already exist' /> : null}
+            { responseStatus.status === 422 ? <Alert variant='blue' text='That email already exist' /> : null}
           </Form>
         )}
       </Formik>

@@ -27,7 +27,7 @@ export const BigCommunity = ({ employees, isLoading, error, fetchEmployees }) =>
           </h3>
           <Carousel>
             {employees.map((employee) => (
-              <div key={employee.id} className='card'>
+              <div key={employee.id} className='card slide'>
                 <img
                   src={employee.avatar}
                   alt={`profile of ${employee.firstName}`}

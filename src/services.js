@@ -1,4 +1,4 @@
-import clientAxios from './config/axios'
+import { clientAxios } from './config/axios'
 
 export const getEmployeesFromAPI = async () => {
   const response = await clientAxios.get('/community')
@@ -21,7 +21,7 @@ export const postEmailToAPI = async (values) => {
 
 export const deleteEmailToAPI = async (email) => {
   try {
-    const response = await clientAxios.delete(`/subscribe/?email=${encodeURIComponent(email)}`)
+    const response = await clientAxios.post('/unsubscribe', email)
     return response
   } catch (error) {
     return error.response

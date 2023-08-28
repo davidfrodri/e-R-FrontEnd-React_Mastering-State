@@ -13,8 +13,8 @@ function App () {
         <Route path='/' element={<MainPage />} />
         <Route path='/community' element={<BigCommunity />} />
         <Route path='/community/:id' element={<UserCommunity />} />
-        <Route path="/not-found" element={<NotFound />} />
       </Route>
+      <Route path="/not-found" element={<NotFound />} />
     </Routes>
   )
 }

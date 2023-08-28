@@ -22,7 +22,6 @@ export const fetchEmployees = () => {
     try {
       const employeesData = await getEmployeesFromAPI()
       dispatch(fetchEmployeesSuccess(employeesData))
-      console.log(employeesData)
     } catch (error) {
       dispatch(fetchEmployeesFailure(error))
     }
